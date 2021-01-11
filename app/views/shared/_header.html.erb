@@ -1,0 +1,21 @@
+<header class="header-main">
+  <div class="heading">
+    <div class="heading_left">
+      <h1 class="title">食べたい奈良</h1>
+    </div>
+    <div class="heading_light">
+      <ul class="list">
+        <li><%= link_to "HOME", "/", class: "list-name" %></li>
+        <li><%= link_to "理由", "/", class: "list-name" %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to "新規投稿", new_product_path, class: "list-name" %></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "list-name" %></li>
+        <% else %>
+          <li><%= link_to "新規登録", new_user_registration_path, class: "list-name" %></li>
+          <li><%= link_to "ログイン", new_user_session_path, class: "list-name" %></li>
+        <% end %>
+        <li><%= link_to "利用規約", "/", class: "list-name" %></li>
+      </ul>
+    </div>
+  </div>
+</header>

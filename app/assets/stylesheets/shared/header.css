@@ -1,0 +1,43 @@
+.header-main {
+  height: 60px;
+  background-color: #d4c8ba;
+}
+
+.heading {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.heading_left {
+  height: 100%;
+  width: 40%;
+}
+
+.title {
+  padding: 10px 0 0 30px;
+  margin: 0;
+}
+
+.heading_light {
+  height: 100%;
+  width: 60%;
+}
+
+.list {
+  display: flex;
+  margin: 0 0 0 0;
+  padding: 10px 10px 0 30px;
+  justify-content: flex-end;
+}
+
+li {
+  list-style: none;
+  height: 100%;
+  padding: 10px;
+}
+
+.list-name {
+  text-decoration: none;
+  color: black;
+}

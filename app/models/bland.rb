@@ -1,0 +1,48 @@
+class Bland < ActiveHash::Base
+  self.data = [
+    { id: 1, name: '--' },
+    { id: 2, name: '奈良市' },
+    { id: 3, name: '大和高田市' },
+    { id: 4, name: '大和郡山市' },
+    { id: 5, name: '天理市' },
+    { id: 6, name: '橿原市' },
+    { id: 7, name: '桜井市' },
+    { id: 8, name: '五條市' },
+    { id: 9, name: '御所市' },
+    { id: 10, name: '生駒市' },
+    { id: 11, name: '香芝市' },
+    { id: 12, name: '葛城市' },
+    { id: 13, name: '宇陀市' },
+    { id: 14, name: '山添村' },
+    { id: 15, name: '平群町' },
+    { id: 16, name: '三郷町' },
+    { id: 17, name: '斑鳩町' },
+    { id: 18, name: '安堵町' },
+    { id: 19, name: '川西町' },
+    { id: 20, name: '三宅町' },
+    { id: 21, name: '田原本町' },
+    { id: 22, name: '曽爾村' },
+    { id: 23, name: '御杖村' },
+    { id: 24, name: '高取町' },
+    { id: 25, name: '明日香村' },
+    { id: 26, name: '上牧町' },
+    { id: 27, name: '王寺町' },
+    { id: 28, name: '広陵町' },
+    { id: 29, name: '河合町' },
+    { id: 30, name: '吉野町' },
+    { id: 31, name: '大淀町' },
+    { id: 32, name: '下市町' },
+    { id: 33, name: '黒滝村' },
+    { id: 34, name: '天川村' },
+    { id: 35, name: '野迫川村' },
+    { id: 36, name: '十津川村' },
+    { id: 37, name: '下北山村' },
+    { id: 38, name: '上北山村' },
+    { id: 39, name: '川上村' },
+    { id: 40, name: '東吉野村' },
+  ]
+
+  include ActiveHash::Associations
+  has_many :products
+
+end
