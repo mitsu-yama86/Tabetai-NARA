@@ -1,3 +1,56 @@
 <%= render "shared/second_header" %>
 
-<p>投稿ページ</p>
+<div class="items-sell-contents">
+
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">投稿内容を入力</h2>
+    <%= form_with(model: @product, local: true) do |f| %>
+
+    <%#= render 'shared/error_messages', model: f.object %>
+
+    <%# 出品画像 %>
+    <div class="img-upload">
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"product-image" %>
+      </div>
+    </div>
+    <%# /出品画像 %>
+
+    <div class="new-items">
+      <div class="weight-bold-text">
+        生産物名
+      </div>
+      <%= f.text_area :product_name, class:"items-text", id:"item-name", placeholder:"生産物名（必須 20文字まで)", maxlength:"20" %>
+      <div class="items-explain">
+            <div class="weight-bold-text">
+        品種名
+      </div>
+      <%= f.text_area :brand, class:"items-text", id:"item-name", placeholder:"品種名（必須 20文字まで)", maxlength:"20" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          生産物の説明
+        </div>
+        <%= f.text_area :text, class:"items-text", id:"item-info", placeholder:"生産物の説明（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+
+    <div class="items-detail">
+      <div class="weight-bold-text">生産地情報</div>
+        <div class="form">
+        <%= f.collection_select(:origin_id, Origin.all, :id, :name, {}, {class:"select-box", id:"origin_id"}) %>
+      </div>
+    </div>
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+</div>

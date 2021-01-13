@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :bland
+  belongs_to :origin
 
   belongs_to :user
   has_many :comments
@@ -9,8 +9,9 @@ class Product < ApplicationRecord
 
   with_options presence: true do
     validates :image
+    validates :product_name, length: { maximum: 20 }
     validates :brand
     validates :origin_id, numericality: { other_than: 1 }
-    validates :text
+    validates :text, length: { maximum: 1000}
   end
 end
