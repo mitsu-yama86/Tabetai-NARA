@@ -1,0 +1,95 @@
+div {
+  display: block;
+}
+
+.first-view {
+  display: flex;
+}
+
+.top-image-left {
+  width: 50%;
+}
+
+.top-image-right {
+  width: 50%;
+}
+
+.page-container {
+  box-sizing: border-box;
+}
+
+.page-container-inner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1080px;
+}
+
+.page-container-main {
+  margin: 50px 0 0 0;
+}
+
+.top-text {
+  font-size: 18px;
+}
+
+/* 商品一覧 */
+
+.item-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.item-contents>.title {
+  font-size: 4.5vh;
+  line-height: 1.4;
+  font-weight: bold;
+  border-bottom: solid black;
+  margin-bottom: 30px;
+}
+
+.item-contents>.subtitle {
+  font-size: 3vh;
+  margin: 1vh 0;
+  text-decoration: none;
+  color: #3ccace;
+  font-weight: bold;
+}
+
+.item-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+
+
+.item-img-content {
+  position: relative;
+}
+
+.item-img {
+  width: 45vh;
+  height: 45vh;
+}
+
+.item-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
+.item-name {
+  font-size: 3.5vh;
+  text-align: center;
+}
+
+/* //商品一覧 */
