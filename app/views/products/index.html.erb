@@ -30,7 +30,7 @@
     <ul class='item-lists'>
       <% @products.each do |product| %>
         <li class='list'>
-          <%= link_to "/" do %>  <%#item_path(item.id)%>
+          <%= link_to product_path(product.id) do %>  <%#item_path(item.id)%>
           <div class='item-img-content'>
             <%= image_tag product.image, class: "item-img" if product.image.attached? %>
             </div>
