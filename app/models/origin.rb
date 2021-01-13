@@ -1,4 +1,4 @@
-class Bland < ActiveHash::Base
+class Origin < ActiveHash::Base
   self.data = [
     { id: 1, name: '--' },
     { id: 2, name: '奈良市' },

@@ -84,11 +84,12 @@
 
 .register-red-btn {
   width: 100%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
-  color: #fff;
+  background: rgb(144, 227, 252);
+  border: 1px solid rgb(144, 227, 252);
+  color: black;
   line-height: 48px;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
 }
 
