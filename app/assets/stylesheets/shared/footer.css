@@ -1,0 +1,14 @@
+.footer {
+  height: 60px;
+  width: 100%;
+  background-color: #d4c8ba;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-title {
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+}

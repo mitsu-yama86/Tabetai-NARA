@@ -6,7 +6,7 @@
     <div class="heading_light">
       <ul class="list">
         <li><%= link_to "HOME", "/", class: "list-name" %></li>
-        <li><%= link_to "理由", "/", class: "list-name" %></li>
+        <li><%= link_to "食べたい奈良とは？", "/", class: "list-name" %></li>
         <% if user_signed_in? %>
           <li><%= link_to "新規投稿", new_product_path, class: "list-name" %></li>
           <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "list-name" %></li>
