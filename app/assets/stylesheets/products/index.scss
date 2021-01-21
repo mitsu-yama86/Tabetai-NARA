@@ -30,6 +30,13 @@ div {
 
 .top-text {
   font-size: 18px;
+  margin: 0 0 20px 0;
+}
+
+.product-title {
+  font-size: 22px;
+  margin: 0 0 20px 0;
+  text-decoration: underline;
 }
 
 /* 商品一覧 */
@@ -65,11 +72,7 @@ div {
   justify-content: center;
 }
 
-.item-lists>.list {
-  width: 37vh;
-  padding: 1vw;
-  background-color: #FFF;
-}
+
 
 
 .item-img-content {
@@ -79,6 +82,7 @@ div {
 .item-img {
   width: 45vh;
   height: 45vh;
+  margin: 0 10px;
 }
 
 .item-info {
@@ -88,7 +92,7 @@ div {
 }
 
 .item-name {
-  font-size: 3.5vh;
+  font-size: 4vh;
   text-align: center;
 }
 
