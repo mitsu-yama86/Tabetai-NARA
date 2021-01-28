@@ -1,54 +1,72 @@
 <%= render "shared/second_header" %>
 
-<div class="item-show">
-  <div class="item-box">
-    <h2 class="name">
-      <%= @product.product_name %>
-    </h2>
-    <div class='item-img-content'>
-      <%= image_tag @product.image ,class:"item-box-img" %>
+<main class="main">
+  <div class="item-show">
+    <div class="item-box">
+      <h2 class="name">
+        <%= @product.product_name %>
+      </h2>
+      <div class='item-img-content'>
+        <%= image_tag @product.image ,class:"item-box-img" %>
+      </div>
+
+      <table class="detail-table">
+        <tbody>
+          <tr>
+            <th class="detail-item">生産者</th>
+            <td class="detail-value"><%= link_to @product.user.nickname, "/" %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">品種</th>
+            <td class="detail-value"><%= @product.brand %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">生産地</th>
+            <td class="detail-value"><%= @product.origin.name %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">解説</th>
+            <td class="detail-value"><%= simple_format(@product.text) %></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <table class="detail-table">
-      <tbody>
-        <tr>
-          <th class="detail-item">生産者</th>
-          <td class="detail-value"><%= link_to @product.user.nickname, "/" %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">品種</th>
-          <td class="detail-value"><%= @product.brand %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">生産地</th>
-          <td class="detail-value"><%= @product.origin.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">解説</th>
-          <td class="detail-value"><%= simple_format(@product.text) %></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="comment-box">
-    <form>
-      <textarea class="comment-text"></textarea>
-      <p class="comment-warn">
-        相手のことを考え丁寧なコメントを心がけましょう。
-      </p>
-      <button type="submit" class="comment-btn">
-        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
-        <span>コメントする<span>
-      </button>
-    </form>
-  </div>
-
-  <% if user_signed_in? %>
-    <% if current_user.id == @product.user.id %>
-        <%= link_to '投稿の編集', "/", method: :get, class: "item-red-btn" %>
-        <%= link_to '削除', product_path(@product.id), method: :delete, class:'item-destroy' %>
+    <% if @comments %>
+      <% @comments.each do |comment| %>
+        <div class="comments">
+          <div class="comments-main">
+            <li class="comments-list">
+              <%= comment.text %>
+              <%= comment.user.nickname %>
+            </li>
+          </div>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
 
-</div>
+    <% if user_signed_in? %>
+      <%= form_with(model: [@product, @comment], local: true) do |f| %>
+        <div class="comment-box">
+          <form>
+            <%= f.text_area :text, class: "comment-text" %>
+            <p class="comment-warn">
+              相手のことを考え丁寧なコメントを心がけましょう。
+            </p>
+            <button type="submit" class="comment-btn">
+              <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
+              <span>コメントする<span>
+            </button>
+          </form>
+        </div>
+      <% end %>
+    <% end %>
+
+    <% if user_signed_in? %>
+      <% if current_user.id == @product.user.id %>
+          <%#= link_to '投稿の編集', "/", method: :get, class: "item-red-btn" %>
+          <%= link_to '削除', product_path(@product.id), method: :delete, class:'item-destroy' %>
+      <% end %>
+    <% end %>
+  </div>
+</main>

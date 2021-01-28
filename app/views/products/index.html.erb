@@ -24,13 +24,12 @@
     </div>
   </div>
 
-  <%# 商品一覧 %>
   <div class='item-contents'>
     <p style="text-align: center;" class='product-title'>投稿一覧</p>
     <ul class='item-lists'>
       <% @products.each do |product| %>
         <li class='list'>
-          <%= link_to product_path(product.id) do %>  <%#item_path(item.id)%>
+          <%= link_to product_path(product.id) do %>
           <div class='item-img-content'>
             <%= image_tag product.image, class: "item-img" if product.image.attached? %>
             </div>
