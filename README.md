@@ -7,7 +7,9 @@
 
 ## App URL
 
-### **https://** 
+### **https://tabetai-nara.herokuapp.com/** 
+##### テストユーザーID：nara@tarou.com
+##### テストユーザーPASS：111aaa
 
 
 ## アプリケーションの利用方法
