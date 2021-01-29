@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :products do
     resources :comments, only: [:create, :show]
   end
+  resources :abouts, onle: [:index]
 end
