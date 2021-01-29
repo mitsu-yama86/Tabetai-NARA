@@ -71,3 +71,85 @@
 
 //中身
 
+//アルバム
+
+.album {
+  margin: 80px auto;
+  background-color: white;
+  position: relative;
+}
+
+.album img {
+  width: 80%;
+  animation-name: album;
+  -webkit-animation-name: album;
+  animation-duration: 15s;
+  -webkit-animation-duration: 15s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+.album .img1 {
+  display: block;
+  margin: 0 auto;
+}
+
+.album .img2 {
+  animation-delay:5s;
+  -webkit-animation-delay:5s;
+  position: absolute;
+  top: 0;
+  left: 10%;
+}
+
+.album .img3 {
+  animation-delay:5s;
+  -webkit-animation-delay:10s;
+  position: absolute;
+  top: 0;
+  left: 10%;
+}
+
+@keyframes album {
+  0% {
+    opacity: 0;
+  }
+  
+  11.1% {
+    opacity: 1;
+  }
+
+  22.2% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes album {
+  0% {
+    opacity: 0;
+  }
+  
+  11.1% {
+    opacity: 1;
+  }
+
+  22.2% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 0;
+  }
+}
+
+//締め
+
+.end-pop {
+  margin: 0px 0 60px;
+  font-size: 35px;
+  font-family: 'TsukuBRdGothic-Regular', sans-serif;
+  font-weight: 600;
+}
