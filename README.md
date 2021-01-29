@@ -5,6 +5,12 @@
 ## アプリケーションの概要
 生産者さんと消費者さんに別れて、コミュニケーションをとる事を目的としています。
 
+![tabenara1](https://user-images.githubusercontent.com/74956780/106236863-05860e80-6241-11eb-9139-b8ed3aca0b23.gif)
+
+![tabenara2](https://user-images.githubusercontent.com/74956780/106236898-15055780-6241-11eb-9eed-ed82c5f7a48e.gif)
+
+![tabenara3](https://user-images.githubusercontent.com/74956780/106236932-251d3700-6241-11eb-91ae-5da90178be03.gif)
+
 ## App URL
 
 ### **https://tabetai-nara.herokuapp.com/** 
