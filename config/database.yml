@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: Tabetai_NARA_production
-  username: Tabetai_NARA
-  password: <%= ENV['TABETAI_NARA_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
